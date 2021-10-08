@@ -3,18 +3,60 @@ body{
 }
 .timer{
     display: flex;
-    justify-content: center; 
+    justify-content: center;
+
 }
 .field:not(:last-child){
-    display: block;
     margin-right: 15px;
-    text-align: center;
-    
+}
+
+.value{
+    margin-bottom: 10px;
 }
 
 .field{
-
-    width: 100px;
-    height: 120px;
+    display: flex;
+   flex-direction: column;
+    text-align: center;
     background-color: gray;
+    padding: 25px;
+
+}
+
+
+.buttom__container{
+    display: block;
+    padding-top: 35px;
+    text-align: center;
+    
+}
+.is-hiden.buttom__timer-hiden{
+display: inline-block;
+
+}
+
+.buttom__timer-hiden {
+    display: none;
+}
+
+.buttom__timer,
+.buttom__timer-hiden{
+    width: 75px;
+    padding: 5px;
+    background: linear-gradient(rgb(213, 101, 123), rgb(210, 194, 108), yellowgreen, teal, rgb(216, 94, 118));
+    background-position: 0 0;
+    border-radius: 30px;
+    border: 3px solid white;
+    animation: background 5s infinite alternate;
+    cursor: pointer;
+}
+
+@keyframes background {
+  100% {
+    background-position: 0 200px;
+  }
+}
+
+.buttom__timer:not(:last-child){
+    margin-right: 50px;
 }
