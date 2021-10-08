@@ -1,11 +1,9 @@
 import refs from '../js/refs.js';
 const { startBtn, stopBtn, clearBtn, dataDays, dataHours, dataMins, dataSecs } = refs;
 
-console.log(clearBtn.className)
 
 export default class CountdownTimer {
     constructor({ selector, targetDate }, markup) {
-        // this.selector = selector;
         this.targetDate = targetDate;
         this.deltaTime = 0;
         this.intId = null;
@@ -21,9 +19,7 @@ export default class CountdownTimer {
             const hours = this.pad(Math.floor((deltaTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
             const mins = this.pad(Math.floor((deltaTime % (1000 * 60 * 60)) / (1000 * 60)));
             const secs = this.pad(Math.floor((deltaTime % (1000 * 60)) / 1000));
-
             this.insertValue(days, hours, mins, secs)
-            // console.log(currentTime)
 
         }, 1000)
     };
@@ -57,9 +53,7 @@ const timer = new CountdownTimer({
 
 }, { dataDays, dataHours, dataMins, dataSecs });
 
-
 timer.start()
-// timer.stop()
 
 clearBtn.addEventListener('click', onClickClearBtn);
 stopBtn.addEventListener('click', onClickStopBtn);
@@ -80,11 +74,6 @@ function onClickStopBtn(evt) {
         clearBtn.classList.add('is-hiden');
         startBtn.removeAttribute("disabled", "disabled");
         timer.stop();
-    }
-
-    if (evt.textContent = 'Clear') {
-        console.log(evt.target);
-
     }
 }
 
