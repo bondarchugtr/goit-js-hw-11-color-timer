@@ -1,5 +1,12 @@
 body{
     background-color: rgb(54, 53, 50);
+   
+
+}
+
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .timer{
     display: flex;
@@ -16,7 +23,7 @@ body{
 
 .field{
     display: flex;
-   flex-direction: column;
+    flex-direction: column;
     text-align: center;
     background-color: gray;
     padding: 25px;
@@ -25,9 +32,10 @@ body{
 
 
 .buttom__container{
-    display: block;
+    display: flex;
     padding-top: 35px;
     text-align: center;
+    justify-content: center;
     
 }
 .is-hiden.buttom__timer-hiden{

@@ -68,7 +68,6 @@ function onClickStartBtn(evt) {
 
     }
 }
-console.log(clearBtn.classlist)
 function onClickStopBtn(evt) {
     if (evt.target) {
         clearBtn.classList.add('is-hiden');

@@ -10,32 +10,35 @@
 </head>
 
 <body>
-    <div class="timer" id="timer-1">
-        <div class="field">
-            <span class="value" data-value="days">0</span>
-            <span class="label">Days</span>
-        </div>
+    <div class="container">
+        <div class="timer" id="timer-1">
+            <div class="field">
+                <span class="value" data-value="days">0</span>
+                <span class="label">Days</span>
+            </div>
 
-        <div class="field">
-            <span class="value" data-value="hours">0</span>
-            <span class="label">Hours</span>
-        </div>
+            <div class="field">
+                <span class="value" data-value="hours">0</span>
+                <span class="label">Hours</span>
+            </div>
 
-        <div class="field">
-            <span class="value" data-value="mins">0</span>
-            <span class="label">Minutes</span>
-        </div>
+            <div class="field">
+                <span class="value" data-value="mins">0</span>
+                <span class="label">Minutes</span>
+            </div>
 
-        <div class="field">
-            <span class="value" data-value="secs">0</span>
-            <span class="label">Seconds</span>
+            <div class="field">
+                <span class="value" data-value="secs">0</span>
+                <span class="label">Seconds</span>
+            </div>
+        </div>
+        <div class="buttom__container">
+            <button class="buttom__timer" disabled="disabled" type="button" data-action="start">Start</button>
+            <button class="buttom__timer" type="button" data-action="stop">Stop</button>
+            <button class="buttom__timer-hiden" type="button" data-action="clear">Clear</button>
         </div>
     </div>
-    <div class="buttom__container">
-        <button class="buttom__timer" disabled="disabled" type="button" data-action="start">Start</button>
-        <button class="buttom__timer" type="button" data-action="stop">Stop</button>
-        <button class="buttom__timer-hiden" type="button" data-action="clear">Clear</button>
-    </div>
+
 
     <script src="./src/index.js" type="module"></script>
 </body>
