@@ -40,11 +40,15 @@ export default class CountdownTimer {
     }
     clearMarcup() {
         const { dataDays, dataHours, dataMins, dataSecs } = this.markup;
-        dataDays.textContent = '00';
-        dataHours.textContent = '00';
-        dataMins.textContent = '00';
-        dataSecs.textContent = '00';
+        defaultTimer()
     }
+}
+
+function defaultTimer() {
+    dataDays.textContent = '00';
+    dataHours.textContent = '00';
+    dataMins.textContent = '00';
+    dataSecs.textContent = '00';
 }
 
 const timer = new CountdownTimer({
