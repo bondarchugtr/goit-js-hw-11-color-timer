@@ -56,7 +56,7 @@ function defaultTimer() {
 
 const timer = new CountdownTimer({
     selector: '#timer-1',
-    targetDate: new Date('Dec 1, 2021'),
+    targetDate: new Date('jan 1, 2022'),
 
 }, { dataDays, dataHours, dataMins, dataSecs });
 
