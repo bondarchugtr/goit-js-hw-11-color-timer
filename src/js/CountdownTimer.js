@@ -9,9 +9,9 @@ export default class CountdownTimer {
         this.intId = null;
         this.markup = markup;
 
-    }
+    };
+
     start() {
-        console.log('Go')
         this.intId = setInterval(() => {
             let currentTime = Date.now();
             const deltaTime = this.targetDate - currentTime
@@ -23,33 +23,36 @@ export default class CountdownTimer {
 
         }, 1000)
     };
+
     stop() {
         clearInterval(this.intId);
-    }
+    };
 
     pad(value) {
         return String(value).padStart(2, '0')
+    };
 
-    }
     insertValue(d, h, m, s) {
         const { dataDays, dataHours, dataMins, dataSecs } = this.markup;
         dataDays.textContent = d;
         dataHours.textContent = h;
         dataMins.textContent = m;
         dataSecs.textContent = s;
-    }
+    };
+
     clearMarcup() {
         const { dataDays, dataHours, dataMins, dataSecs } = this.markup;
         defaultTimer()
-    }
-}
+    };
+};
+
 
 function defaultTimer() {
     dataDays.textContent = '00';
     dataHours.textContent = '00';
     dataMins.textContent = '00';
     dataSecs.textContent = '00';
-}
+};
 
 const timer = new CountdownTimer({
     selector: '#timer-1',
@@ -71,14 +74,14 @@ function onClickStartBtn(evt) {
         timer.start();
 
     }
-}
+};
 function onClickStopBtn(evt) {
     if (evt.target) {
         clearBtn.classList.add('is-hiden');
         startBtn.removeAttribute("disabled", "disabled");
         timer.stop();
     }
-}
+};
 
 function onClickClearBtn(evt) {
     if (evt.target) {
@@ -87,5 +90,5 @@ function onClickClearBtn(evt) {
         clearBtn.classList.toggle('is-hiden');
     }
 
-}
+};
 
